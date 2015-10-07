@@ -54,12 +54,11 @@
 <%- partial('post/share') %>
 <% } %>
 
-<% if (!index && theme.duoshuo && post.comments){ %>
-<%- partial('post/duoshuo', {
-    key: post.slug,
-    title: post.title,
-    url: config.url+url_for(post.path)
-  }) %>
+<% if (!index && theme.uyan && post.comments){ %>
+<!-- UY BEGIN -->
+<div id="uyan_frame" class="duoshuo"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2060942"></script>
+<!-- UY END -->
 <% } %>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
